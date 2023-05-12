@@ -4,15 +4,15 @@ local mugshotInProgress, createdCamera, MugshotArray, playerData = false, 0, {},
 local handle, board, board_scaleform, overlay, ped, pedcoords, x, y, z, r, suspectheading, suspectx, suspecty, suspectz, board_pos
 local MugShots = {}
 
--- Mugshot location  ( Position is the default QBCore Prison Interior )
-	x = 1828.69
-    y = 2581.72
-    z = 46.3
-    r = {x = 0.0, y = 0.0, z = 92.23}
-    suspectheading = 265.00
-    suspectx = 1827.63
-    suspecty = 2581.7
-    suspectz = 44.89
+-- Mugshot location  ( Position is the default QBCore Prison Interior ) vector4(473.06, -1012.45, 26.27, 359.02) vector4(472.97, -1011.22, 26.27, 179.1)
+	x = 473.06
+    y = -1012.45
+    z = 26.27
+    r = {x = 0.0, y = 0.0, z = 1}
+    suspectheading = 179.1
+    suspectx = 472.97
+    suspecty = -1011.22
+    suspectz = 25.27
 	
 -- Mugshot functions
 
