@@ -52,16 +52,16 @@ const DojJobs = {
 }
 
 const MONTH_NAMES = [
-  "January",
-  "February",
-  "March",
+  "Januar",
+  "Februar",
+  "Marts",
   "April",
-  "May",
-  "June",
-  "July",
+  "Maj",
+  "Juni",
+  "Juli",
   "August",
   "September",
-  "October",
+  "Oktober",
   "November",
   "December",
 ];
@@ -136,17 +136,17 @@ function timeAgo(dateParam) {
   const isThisYear = today.getFullYear() === date.getFullYear();
 
   if (seconds < 5) {
-    return "Just Now";
+    return "Lige nu";
   } else if (seconds < 60) {
-    return `${seconds} Seconds ago`;
+    return `${seconds} Sekunder siden`;
   } else if (seconds < 90) {
-    return "About a minute ago";
+    return "Omkring et minut siden";
   } else if (minutes < 60) {
-    return `${minutes} Minutes ago`;
+    return `${minutes} Minutter siden`;
   } else if (isToday) {
-    return getFormattedDate(date, "Today");
+    return getFormattedDate(date, "I dag");
   } else if (isYesterday) {
-    return getFormattedDate(date, "Yesterday");
+    return getFormattedDate(date, "I går");
   } else if (isThisYear) {
     return getFormattedDate(date, false, true);
   }
@@ -256,19 +256,19 @@ $(document).ready(() => {
     $(".convictions-holder").empty();
     $(".profile-incidents-holder").empty();
 
-    let licencesHTML = '<div style="color: #fff; text-align:center;">No Licenses</div>';
-    let tagsHTML = '<div style="color: #fff; text-align:center;">No Tags</div>';
-    let convHTML = '<div style="color: #fff; text-align:center;">Clean Record</div>';
-    let incidentsHTML = '<div style="color: #fff; text-align:center;">No Incidents</div>';
-    let vehHTML = '<div style="color: #fff; text-align:center;">No Vehicles</div>';
-    let galleryHTML = '<div style="color: #fff; text-align:center;">No Photos</div>';
-    let propertyHTML = '<div style="color: #fff; text-align:center;">No Properties</div>';
+    let licencesHTML = '<div style="color: #fff; text-align:center;">Ingen licenser</div>';
+    let tagsHTML = '<div style="color: #fff; text-align:center;">Ingen Tags</div>';
+    let convHTML = '<div style="color: #fff; text-align:center;">Ren rekord</div>';
+    let incidentsHTML = '<div style="color: #fff; text-align:center;">Ingen hændelser</div>';
+    let vehHTML = '<div style="color: #fff; text-align:center;">Ingen køretøjer</div>';
+    let galleryHTML = '<div style="color: #fff; text-align:center;">Ingen billeder</div>';
+    let propertyHTML = '<div style="color: #fff; text-align:center;">Ingen ejendomme</div>';
 
     // convert key value pair object of licenses to array
     let licenses = Object.entries(result.licences);
 
     if (licenses.length == 0 || licenses.length == undefined) {
-      var licenseTypes = ['business', 'pilot', 'weapon', 'driver'];
+      var licenseTypes = ['forretning', 'pilot', 'våben', 'kørekort'];
       licenses = Object.entries(licenseTypes.reduce((licenseType, licenseValue) => (licenseType[licenseValue] = false, licenseType), {}));
     }
 
@@ -417,7 +417,7 @@ $(document).ready(() => {
         {
           className: "remove-bulletin",
           icon: "fas fa-times",
-          text: "Remove Item",
+          text: "Fjern",
           info: $(this).data("id"),
           status: $(this).data("title"),
         },
@@ -3849,8 +3849,8 @@ $(document).ready(() => {
       color8: "#2554cc",
       color9: "#6E707C",
       color10: "#8F741B",
-      image: "img/LSPD.webp",
-      name: "LOS SANTOS POLICE",
+      image: "img/politi.png",
+      name: "AfterDark Politi",
     },
     bcso: {
       color1: "#333333",

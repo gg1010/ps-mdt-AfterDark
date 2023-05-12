@@ -8,11 +8,11 @@ Config.UseCQCMugshot = true
 Config.MugPhotos = 1
 
 -- Images for mug shots will be uploaded here. Add a Discord webhook. 
-Config.MugShotWebhook = ''
+Config.MugShotWebhook = 'https://discord.com/api/webhooks/1106557053469724764/Et-Xwn1hlcRyEJO9QXFTp1PYdntwtCIakm4qoqormxHGHqQY-9Yon7Hd_BS6CR3ce2sL'
 
 -- Clock-in notifications for duty. Add a Discord webhook.
 -- Command /mdtleaderboard, will display top players per clock-in hours.
-Config.ClockinWebhook = ''
+Config.ClockinWebhook = 'https://discord.com/api/webhooks/1106557228686782547/Bs-eBNI2wxE0QFvE8kLJzA5UbB39GwrzAo54Mvpqte8TqPkpMCehCoUR7WlLsVtMMmGY'
 
 -- If set to true = Fine gets automatically removed from bank automatically charging the player.
 -- If set to false = The fine gets sent as an Invoice to their phone and it us to the player to pay for it, can remain unpaid and ignored.
@@ -21,14 +21,14 @@ Config.BillVariation = true
 -- Set up your inventory to automatically retrieve images when a weapon is registered at a weapon shop or self-registered.
 -- If you're utilizing lj-inventory's latest version from GitHub, no further modifications are necessary. 
 -- However, if you're using a different inventory system, please refer to the "Inventory Edit | Automatic Add Weapons with images" section in ps-mdt's README.
-Config.InventoryForWeaponsImages = "lj-inventory"
+Config.InventoryForWeaponsImages = "qb-inventory"
 
 -- "LegacyFuel", "lj-fuel", "ps-fuel"
-Config.Fuel = "ps-fuel"
+Config.Fuel = "LegacyFuel"
 
 -- Google Docs Link
 Config.sopLink = {
-    ['police'] = '',
+    ['police'] = 'https://docs.google.com/document/d/1rda542ZuEJ0R0_xK0FROM3CTWHY5y8fcHDZI9CiDuIw/edit',
     ['ambulance'] = '',
     ['bcso'] = '',
     ['doj'] = '',
@@ -41,7 +41,7 @@ Config.sopLink = {
 
 -- Google Docs Link
 Config.RosterLink = {
-    ['police'] = '',
+    ['police'] = 'https://docs.google.com/spreadsheets/d/1VYLsPTCnLMOnkQwttOwldY5WxJM78s9BCgDnXYNB6e0/edit#gid=1406396456',
     ['ambulance'] = '',
     ['bcso'] = '',
     ['doj'] = '',
@@ -84,7 +84,7 @@ Config.ImpoundLocations = {
 
 -- Support for Wraith ARS 2X. 
 
-Config.UseWolfknightRadar = false
+Config.UseWolfknightRadar = true
 Config.WolfknightNotifyTime = 5000 -- How long the notification displays for in milliseconds (30000 = 30 seconds)
 
 -- IMPORTANT: To avoid making excessive database queries, modify this config to true 'CONFIG.use_sonorancad = true' setting in the configuration file located at 'wk_wars2x/config.lua'. 
@@ -118,16 +118,16 @@ Config.LogPerms = {
 }
 
 Config.PenalCodeTitles = {
-    [1] = 'OFFENSES AGAINST PERSONS',
-    [2] = 'OFFENSES INVOLVING THEFT',
-    [3] = 'OFFENSES INVOLVING FRAUD',
-    [4] = 'OFFENSES INVOLVING DAMAGE TO PROPERTY',
-    [5] = 'OFFENSES AGAINST PUBLIC ADMINISTRATION',
-    [6] = 'OFFENSES AGAINST PUBLIC ORDER',
-    [7] = 'OFFENSES AGAINST HEALTH AND MORALS',
-    [8] = 'OFFENSES AGAINST PUBLIC SAFETY',
-    [9] = 'OFFENSES INVOLVING THE OPERATION OF A VEHICLE',
-    [10] = 'OFFENSES INVOLVING THE WELL-BEING OF WILDLIFE',
+    [1] = 'Lovovertrædelser mod personer',
+    [2] = 'Lovovertrædelser, der involverer tyveri',
+    [3] = 'Lovovertrædelser, der involverer svig',
+    [4] = 'Lovovertrædelser, der involverer skade på ejendom',
+    [5] = 'Lovovertrædelser mod offentlig administration',
+    [6] = 'Lovovertrædelser mod offentlig orden',
+    [7] = 'Lovovertrædelser mod sundhed og moral',
+    [8] = 'OVERTRÆDELSER MOD DEN OFFENTLIGE SIKKERHED',
+    [9] = 'Lovovertrædelser, der involverer driften af et køretøj',
+    [10] = 'OVERTRÆDELSER, DER INDRØRER DYRELIVENS VELVÆRE',
 }
 
 Config.PenalCode = {
@@ -262,14 +262,14 @@ Config.PenalCode = {
         [9] = {title = '2.grad hastighedsoverskridelse', class = 'Overtrædelse', id = 'P.C. 9009', months = 0, fine = 2200, color = 'green'},
         [10] = {title = '1.grad hastighedsoverskridelse ', class = 'Overtrædelse', id = 'P.C. 9009', months = 10, fine = 2500, color = 'green'},
         [11] = {title = 'Kørelse I fratagelse perioden', class = 'Overtrædelse', id = 'P.C. 9012', months = 0, fine = 500, color = 'green'},
-        [12] = {title = 'Ingen kørekort under kørelse = 'Overtrædelse', id = 'P.C. 9013', months = 0, fine = 500, color = 'green'},
+        [12] = {title = 'Ingen kørekort under kørelse', class = 'Overtrædelse', id = 'P.C. 9013', months = 0, fine = 500, color = 'green'},
         [13] = {title = 'Ulovlig u-vending', class = 'Overtrædelse', id = 'P.C. 9013', months = 0, fine = 75, color = 'green'},
         [14] = {title = 'Ulovlig overhaling', class = 'Overtrædelse', id = 'P.C. 9014', months = 0, fine = 300, color = 'green'},
         [15] = {title = 'Ulovlig sving', class = 'Overtrædelse', id = 'P.C. 9016', months = 0, fine = 150, color = 'green'},
         [16] = {title = 'Ulovlig kørelse ved skiltning', class = 'Overtrædelse', id = 'P.C. 9017', months = 0, fine = 600, color = 'green'},
         [17] = {title = 'Ulovlig Parkering', class = 'Overtrædelse', id = 'P.C. 9018', months = 0, fine = 300, color = 'green'},
         [18] = {title = 'Kørelse uden lys', class = 'Overtrædelse', id = 'P.C. 9020', months = 0, fine = 300, color = 'green'},
-        [19] = {title = 'Gade ras, class = 'Forbrydelse', id = 'P.C. 9021', months = 15, fine = 1500, color = 'green'},
+        [19] = {title = 'Gade ras', class = 'Forbrydelse', id = 'P.C. 9021', months = 15, fine = 1500, color = 'green'},
         [20] = {title = 'Flyver uden licens', class = 'Forbrydelse', id = 'P.C. 9022', months = 10, fine = 1700, color = 'orange'},
         [21] = {title = 'Ulovlig køretøj', class = 'Overtrædelse', id = 'P.C. 9023', months = 0, fine = 1800, color = 'green'},
         [22] = {title = 'Håndholdt telefon under kørelse', class = 'Overtrædelse', id = 'P.C. 9023', months = 0, fine = 600, color = 'green'},
