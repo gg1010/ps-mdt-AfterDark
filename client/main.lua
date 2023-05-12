@@ -463,7 +463,7 @@ RegisterNUICallback('SetHouseLocation', function(data, cb)
         coords[#coords+1] = tonumber(word)
     end
     SetNewWaypoint(coords[1], coords[2])
-    QBCore.Functions.Notify('GPS has been set!', 'success')
+    QBCore.Functions.Notify('GPS er blevet sat!', 'success')
 end)
 
 --====================================================================================
@@ -690,7 +690,7 @@ RegisterNUICallback("saveVehicleInfo", function(data, cb)
             end
 
             if found == 0 then
-                QBCore.Functions.Notify('Vehicle not found!', 'error')
+                QBCore.Functions.Notify('Køretøj ikke fundet!', 'error')
                 SendNUIMessage({ type = "redImpound" })
             end
         else
@@ -823,9 +823,9 @@ RegisterNetEvent('mdt:client:setRadio', function(radio)
     if type(tonumber(radio)) == "number" then
         exports["pma-voice"]:setVoiceProperty("radioEnabled", true)
         exports["pma-voice"]:setRadioChannel(tonumber(radio))
-        QBCore.Functions.Notify("You have set your radio frequency to "..radio..".", "success")
+        QBCore.Functions.Notify("Du har indstillet din radiofrekvens til "..radio..".", "success")
     else
-        QBCore.Functions.Notify("Invalid Station(Please enter a number)", "error")
+        QBCore.Functions.Notify("Ugyldig station (indtast venligst et nummer)", "error")
     end
 end)
 

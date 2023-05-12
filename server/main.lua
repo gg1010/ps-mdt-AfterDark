@@ -49,14 +49,14 @@ if Config.UseWolfknightRadar == true then
 		local driverunlicensed = nil
 
 		if bolo == true then
-			TriggerClientEvent('QBCore:Notify', src, 'BOLO ID: '..boloId..' | Title: '..title..' | Registered Owner: '..vehicleOwner..' | Plate: '..plate, 'error', Config.WolfknightNotifyTime)
+			TriggerClientEvent('QBCore:Notify', src, 'EFTERLYSNINGS ID: '..boloId..' | Titel: '..title..' | Ejer: '..vehicleOwner..' | Nummerplade: '..plate, 'error', Config.WolfknightNotifyTime)
 		end
 		if warrant == true then
-			TriggerClientEvent('QBCore:Notify', src, 'WANTED - INCIDENT ID: '..incidentId..' | Registered Owner: '..owner..' | Plate: '..plate, 'error', Config.WolfknightNotifyTime)
+			TriggerClientEvent('QBCore:Notify', src, 'EFTERLYST - HÆNDELSESID: '..incidentId..' | Ejer: '..owner..' | Nummerplade: '..plate, 'error', Config.WolfknightNotifyTime)
 		end
 
 		if driversLicense == false and vehicleOwner then
-			TriggerClientEvent('QBCore:Notify', src, 'NO DRIVERS LICENCE | Registered Owner: '..vehicleOwner..' | Plate: '..plate, 'error', Config.WolfknightNotifyTime)
+			TriggerClientEvent('QBCore:Notify', src, 'INGEN KØREKORT | Ejer: '..vehicleOwner..' | Nummerplade: '..plate, 'error', Config.WolfknightNotifyTime)
 		end
 
 
@@ -172,7 +172,7 @@ RegisterNetEvent("ps-mdt:server:ClockSystem", function()
     local lastName = PlayerData.charinfo.lastname:sub(1,1):upper()..PlayerData.charinfo.lastname:sub(2)
     if PlayerData.job.onduty then
         
-        TriggerClientEvent('QBCore:Notify', source, "You're clocked-in", 'success')
+        TriggerClientEvent('QBCore:Notify', source, "Du er klokket ind", 'success')
 		MySQL.Async.insert('INSERT INTO mdt_clocking (user_id, firstname, lastname, clock_in_time) VALUES (:user_id, :firstname, :lastname, :clock_in_time) ON DUPLICATE KEY UPDATE user_id = :user_id, firstname = :firstname, lastname = :lastname, clock_in_time = :clock_in_time', {
 			user_id = PlayerData.citizenid,
 			firstname = firstName,
@@ -182,7 +182,7 @@ RegisterNetEvent("ps-mdt:server:ClockSystem", function()
 		end)
 		sendToDiscord(65280, "MDT Clock-In", 'Player: **' ..  firstName .. " ".. lastName .. '**\n\nJob: **' .. PlayerData.job.name .. '**\n\nRank: **' .. PlayerData.job.grade.name .. '**\n\nStatus: **On Duty**', "ps-mdt | Made by Project Sloth")
     else
-		TriggerClientEvent('QBCore:Notify', source, "You're clocked-out", 'success')
+		TriggerClientEvent('QBCore:Notify', source, "Du er klokket ud", 'success')
 		MySQL.query.await('UPDATE mdt_clocking SET clock_out_time = NOW(), total_time = TIMESTAMPDIFF(SECOND, clock_in_time, NOW()) WHERE user_id = @user_id ORDER BY id DESC LIMIT 1', {
 			['@user_id'] = PlayerData.citizenid
 		})
@@ -1544,7 +1544,7 @@ RegisterNetEvent('mdt:server:setRadio', function(cid, newRadio)
 	if radio ~= nil then
 		TriggerClientEvent('mdt:client:setRadio', targetSource, newRadio)
 	else
-		TriggerClientEvent("QBCore:Notify", src, targetName..' does not have a radio!', 'error')
+		TriggerClientEvent("QBCore:Notify", src, targetName..' har ikke en radio!', 'error')
 	end
 end)
 
@@ -1690,7 +1690,7 @@ end
 QBCore.Functions.CreateCallback('mdt:server:GetPlayerSourceId', function(source, cb, targetCitizenId)
     local targetPlayer = QBCore.Functions.GetPlayerByCitizenId(targetCitizenId)
     if targetPlayer == nil then 
-        TriggerClientEvent('QBCore:Notify', source, "Citizen seems Asleep / Missing", "error")
+        TriggerClientEvent('QBCore:Notify', source, "Borgeren ser ud til at sove / mangler", "error")
         return
     end
     local targetSource = targetPlayer.PlayerData.source
@@ -1732,8 +1732,8 @@ RegisterNetEvent('mdt:server:removeMoney', function(citizenId, fine, incidentId)
 	if not antiSpam then
 		local date = os.date("%Y-%m-%d %H:%M")
 		if Player.Functions.RemoveMoney('bank', fine, 'lspd-fine') then
-			TriggerClientEvent('QBCore:Notify', src, citizenId.." received a citation!")
-			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, fine.."$ was removed from your bank!")
+			TriggerClientEvent('QBCore:Notify', src, citizenId.." modtaget et citat!")
+			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, fine.."$ blev fjernet fra din bank!")
 			local info = {
 				citizenId = citizenId,
 				fine = "$"..fine,
@@ -1745,14 +1745,14 @@ RegisterNetEvent('mdt:server:removeMoney', function(citizenId, fine, incidentId)
 			TriggerClientEvent('inventory:client:ItemBox', Player.PlayerData.source, QBCore.Shared.Items['mdtcitation'], "add")
 			TriggerEvent('mdt:server:AddLog', "A Fine was writen by "..fullname.." and was sent to "..citizenId..", the Amount was $".. fine ..". (ID: "..incidentId.. ")")
 		else
-			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, "Something went wrong!")
+			TriggerClientEvent('QBCore:Notify', Player.PlayerData.source, "Noget gik galt!")
 		end
 		antiSpam = true
 		SetTimeout(60000, function()
 			antiSpam = false
 		end)
 	else
-		TriggerClientEvent('QBCore:Notify', src, "On cooldown!")
+		TriggerClientEvent('QBCore:Notify', src, "Nedkøling!")
 	end
 end)
 
