@@ -127,11 +127,11 @@ local function PrepBoard()
 end
 
 local function MakeBoard()
-    title = "Bolingbroke Penitentiary"
+    title = "AfterDark Fængsel"
     center = playerData.charinfo.firstname.. " ".. playerData.charinfo.lastname
     footer = playerData.citizenid
     header = playerData.charinfo.birthdate
-	CallScaleformMethod(board_scaleform, 'SET_BOARD', title, center, footer, header, 0, 1337, 116)
+	CallScaleformMethod(board_scaleform, 'SET_BOARD', title, center, footer, header, 0, -1, 116)
 end
 
 local function PlayerBoard()
