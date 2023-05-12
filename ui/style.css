@@ -456,7 +456,7 @@ span.bulletin-item-title {
 }
 
 span.bulletin-item-title[contenteditable]:empty::before {
-    content: 'Enter Title';
+    content: 'Indtast titel';
 }
 
 .bulletin-item-info {
@@ -475,7 +475,7 @@ span.bulletin-item-info {
 }
 
 span.bulletin-item-info[contenteditable]:empty::before {
-    content: 'Enter Bulletin Information';
+    content: 'Indtast opslagstavle oplysninger';
 }
 
 .bulletin-bottom-info {

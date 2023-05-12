@@ -89,9 +89,10 @@ function getFormattedDate(date, prefomattedDate = false, hideYear = false) {
 }
 
 var quotes = [
-  'Project Sloth On Top!',
-  'A Discord rewrite fixes everything...',
-  'Does anyone even read these?',
+  'Mere at være, end at synes!',
+  'Sustaining Victory.',
+  'Indsigt, udsyn og fremsyn!',
+  'Fordi noget er værd at kæmpe for',
   'The best way to predict your future is to create it.',
   'Believe you can and you\'re halfway there.',
   'In three words I can sum up everything I\'ve learned about life: it goes on.',
@@ -113,6 +114,7 @@ var quotes = [
   'The greatest glory in living lies not in never falling, but in rising every time we fall.',
   'The two most important days in your life are the day you are born and the day you find out why.',
   'Success is not how high you have climbed, but how you make a positive difference to the world.',
+  'Alex/Gustav er den bedste!!'
 ]
 
 function randomizeQuote() {
@@ -232,7 +234,7 @@ $(document).ready(() => {
 
     const { vehicles, tags, gallery, convictions, incidents, properties, fingerprint } = result;
 
-    $(".manage-profile-editing-title").html(`You are currently editing ${result["firstname"]} ${result["lastname"]}`);
+    $(".manage-profile-editing-title").html(`Du redigerer i øjeblikket ${result["firstname"]} ${result["lastname"]}`);
     $(".manage-profile-citizenid-input").val(result['cid']);
     $(".manage-profile-name-input-1").val(result["firstname"]);
     $(".manage-profile-name-input-2").val(result["lastname"]);
@@ -364,7 +366,7 @@ $(document).ready(() => {
                 <span contenteditable="true" class="bulletin-item-title"></span>
                 <span contenteditable="true" class="bulletin-item-info"></span>
                 <div class="bulletin-bottom-info">
-                <div class="bulletin-date">${MyName} - Just Now</div>
+                <div class="bulletin-date">${MyName} - Lige Nu</div>
                 </div>
             </div>`);
     } else {
@@ -772,7 +774,7 @@ $(document).ready(() => {
           <p><strong>📝 Resumé:</strong></p>
           <p><em>[Indsæt rapportoversigt her]</em></p>
           <p>&nbsp;</p>
-          <p><strong>🧍 Gidsel:</strong> [Name Here]</p>
+          <p><strong>🧍 Gidsel:</strong> [Navn Her]</p>
           <p>&nbsp;</p>
           <p><strong>🔪 Våben/genstande konfiskeret:</strong></p>
           <p><em>· [Indsæt liste her]</em></p>
@@ -811,7 +813,7 @@ $(document).ready(() => {
       $(".manage-incidents-title-holder").empty();
       $(".manage-incidents-title-holder").prepend(
         `
-            <div class="manage-incidents-title">Manage Incident</div>
+            <div class="manage-incidents-title">Administrer hændelse</div>
             <div class="manage-incidents-create"> <span class="fas fa-plus" style="margin-top: 3.5px;"></span></div>
             <div class="manage-incidents-save"><span class="fas fa-save" style="margin-top: 3.5px;"></span></div>
             `
@@ -823,7 +825,7 @@ $(document).ready(() => {
       $(".associated-incidents-tags-holder").html("");
 
       $(".manage-incidents-editing-title").html(
-        "You are currently creating a new Incident"
+        "Du er i øjeblikket ved at oprette en ny hændelse"
       );
       $(".manage-incidents-editing-title").data("id", 0);
 
@@ -1375,7 +1377,7 @@ $(document).ready(() => {
     `;
       }
       $(".manage-bolos-editing-title").html(
-        "You are currently creating a new BOLO"
+        "Du er i øjeblikket ved at oprette en ny efterlysning"
       );
       $(".manage-bolos-input-title").val("");
       $(".manage-bolos-input-plate").val("");
@@ -1436,7 +1438,7 @@ $(document).ready(() => {
     function () {
       let existing = !(
         $(".manage-bolos-editing-title").html() ==
-        "You are currently creating a new BOLO"
+        "Du er i øjeblikket ved at oprette en ny efterlysning"
       );
       let id = $(".manage-bolos-editing-title").data("id");
       let title = $("#bolotitle").val();
@@ -1705,7 +1707,7 @@ $(document).ready(() => {
       {
         className: "bolo-delete",
         icon: "fas fa-times",
-        text: "Delete Bolo",
+        text: "fjern efterlysning",
         info: $(this).data("id"),
         status: "",
       },
@@ -1843,7 +1845,7 @@ $(document).ready(() => {
       let args = [
           {
             className: "incidents-remove-tag",
-            text: "Remove Tag",
+            text: "fjerne tag",
             info: descr,
             status: "",
           },
@@ -2015,7 +2017,7 @@ $(document).ready(() => {
         {
           className: "associated-incidents-remove-tag",
           icon: "fas fa-times",
-          text: "Remove Tag",
+          text: "fjerne tag",
           info: $(this).html(),
           status: $(this).data("id"),
         },
@@ -2109,7 +2111,7 @@ $(document).ready(() => {
       {
         className: "incidents-remove-tag",
         icon: "fas fa-times",
-        text: "Remove Tag",
+        text: "fjerne tag",
         info: $(this).html(),
         status: "",
       },
@@ -2123,7 +2125,7 @@ $(document).ready(() => {
     ).remove();
   });
 
-  // Setup the remove tag context menu for each holder section
+  // Setup the fjerne tag context menu for each holder section
   const holdersSelectors = [".manage-incidents-civilians-holder", ".manage-incidents-officers-holder", ".reports-civilians-tags-holder", ".reports-officers-tags-holder", ".manage-officers-tags-holder"];
   holdersSelectors.forEach(holder => {
     $(holder).on(
@@ -2134,7 +2136,7 @@ $(document).ready(() => {
         {
           className: "remove-tag",
           icon: "fas fa-times",
-          text: "Remove Tag",
+          text: "fjerne tag",
           info: $(this).html(),
           status: "",
         },
@@ -2177,7 +2179,7 @@ $(document).ready(() => {
       {
         className: "incidents-remove-normal-tag",
         icon: "fas fa-times",
-        text: "Remove Tag",
+        text: "fjerne tag",
         info: $(this).html(),
         status: "",
       },
@@ -2454,7 +2456,7 @@ $(document).ready(() => {
     </div>
 `;}
       $(".manage-reports-editing-title").html(
-        "You are currently creating a new report"
+        "Du er i øjeblikket ved at oprette en ny rapport"
       );
       $(".manage-reports-input-title").val("");
       $(".manage-reports-input-type").val("");
@@ -2533,7 +2535,7 @@ $(document).ready(() => {
     function () {
       let existing = !(
         $(".manage-reports-editing-title").html() ==
-        "You are currently creating a new report"
+        "Du er i øjeblikket ved at oprette en ny rapport"
       );
       let id = $(".manage-reports-editing-title").data("id");
       let title = $("#reporttitle").val();
@@ -2631,7 +2633,7 @@ $(document).ready(() => {
 
                                 <div style="display: flex; flex-direction: column; margin-top: 2.5px; margin-left: 5px; width: 100%; padding: 5px;">
                                 <div style="display: flex; flex-direction: column;">
-                                    <div class="profile-item-title">No Vehicles Matching that search</div>
+                                    <div class="profile-item-title">Ingen køretøjer, der matcher den søgning</div>
                                     </div>
                                     <div class="profile-bottom-info">
                                     </div>
@@ -2677,14 +2679,14 @@ $(document).ready(() => {
                                 <div class="dmv-item-title">${value.model}</div>
                                     <div class="dmv-tags">
                                         <div class="dmv-tag ${paint}-color">${value.colorName}</div>
-                                        <div class="dmv-tag ${impound}">Impound</div>
-                                        <div class="dmv-tag ${bolo}">BOLO</div>
-                                        <div class="dmv-tag ${stolen}">Stolen</div>
-                                        <div class="dmv-tag ${codefive}">Code 5</div>
+                                        <div class="dmv-tag ${impound}">Beslaglagt</div>
+                                        <div class="dmv-tag ${bolo}">Efterlyst</div>
+                                        <div class="dmv-tag ${stolen}">Stjålet</div>
+                                        <div class="dmv-tag ${codefive}">Kan være farlige</div>
                                     </div>
                                 </div>
                                 <div class="dmv-bottom-info">
-                                    <div class="dmv-id">Plate: ${value.plate} · Owner: ${value.owner}</div>
+                                    <div class="dmv-id">Nummerplade: ${value.plate} · Ejer: ${value.owner}</div>
                                 </div>
                             </div>
                         </div>
@@ -2805,7 +2807,7 @@ $(document).ready(() => {
           {
             className: "mark-code-5",
             icon: "fas fa-check",
-            text: "Mark as Code 5",
+            text: "Marker som kan være farlig",
             info: plate,
             status: "",
           },
@@ -2815,7 +2817,7 @@ $(document).ready(() => {
           {
             className: "remove-code-5",
             icon: "fas fa-times",
-            text: "Remove Code 5 Status",
+            text: "Fjern kode kan være farlig",
             info: plate,
             status: "",
           },
@@ -2849,7 +2851,7 @@ $(document).ready(() => {
           {
             className: "mark-stolen",
             icon: "fas fa-check",
-            text: "Mark as Stolen",
+            text: "Marker som stjålet",
             info: plate,
             status: "",
           },
@@ -2859,7 +2861,7 @@ $(document).ready(() => {
           {
             className: "remove-stolen",
             icon: "fas fa-times",
-            text: "Remove Code 5 Status",
+            text: "Fjern stjalet status",
             info: plate,
             status: "",
           },
@@ -3007,7 +3009,7 @@ $(document).ready(() => {
           {
             className: "impound-vehicle",
             icon: "fas fa-check",
-            text: "State Impound",
+            text: "Sæt som beslaglægt",
             info: plate,
             status: "",
           },
@@ -3017,14 +3019,14 @@ $(document).ready(() => {
           {
             className: "remove-impound",
             icon: "fas fa-times",
-            text: "Unimpound Vehicle",
+            text: "Fjern fra beslaglægt",
             info: plate,
             status: "",
           },
           {
             className: "status-impound",
             icon: "fas fa-info-circle",
-            text: "View Impound Status",
+            text: "Se beslaglæggelsesstatus",
             info: plate,
             status: "",
           },
@@ -3100,7 +3102,7 @@ $(document).ready(() => {
 
                                 <div style="display: flex; flex-direction: column; margin-top: 2.5px; margin-left: 5px; width: 100%; padding: 5px;">
                                 <div style="display: flex; flex-direction: column;">
-                                    <div class="profile-item-title">No Weapons Matching that search</div>
+                                    <div class="profile-item-title">Ingen våben, der matcher den søgning</div>
                                     </div>
                                     <div class="profile-bottom-info">
                                     </div>
@@ -3125,7 +3127,7 @@ $(document).ready(() => {
 
                                 </div>
                                 <div class="weapons-bottom-info">
-                                  <div class="weapons-id">Serial Number: ${value.serial} · Owner: ${value.owner} · ID: ${value.id}</div>
+                                  <div class="weapons-id">Serienummer: ${value.serial} · Ejer: ${value.owner} · ID: ${value.id}</div>
                                 </div>
                             </div>
                         </div>
@@ -3309,7 +3311,7 @@ $(document).ready(() => {
       {
         className: "view-profile",
         icon: "far fa-eye",
-        text: "View Profile",
+        text: "Se profil",
         info: $(this).data("cid"),
         status: "",
       },
@@ -3392,28 +3394,28 @@ $(document).ready(() => {
         {
           className: "toggle-duty",
           icon: "fas fa-thumbtack",
-          text: "Toggle Duty",
+          text: "Slå pligt til/fra",
           info: cid,
           status: "",
         },
         {
           className: "set-callsign",
           icon: "far fa-id-badge",
-          text: "Set Callsign",
+          text: "Indstil Kaldesignal",
           info: cid,
           status: "",
         },
         {
           className: "set-radio",
           icon: "fas fa-broadcast-tower",
-          text: "Set Radio",
+          text: "Indstil radio",
           info: cid,
           status: "",
         },
         {
           className: "set-waypoint",
           icon: "fas fa-map-marker-alt",
-          text: "Set Waypoint",
+          text: "Indstil waypoint",
           info: cid,
           status: "",
         },
@@ -3522,42 +3524,42 @@ $(document).ready(() => {
             {
               className: "respond-call",
               icon: "fas fa-reply",
-              text: "Respond to Call",
+              text: "Besvar opkald",
               info: callId,
               status: "",
             },
             {
               className: "attached-units",
               icon: "fas fa-link",
-              text: "Attached Units",
+              text: "Tilknyttede enheder",
               info: callId,
               status: "",
             },
             {
               className: "call-detach",
               icon: "fas fa-sign-out-alt",
-              text: "Detach",
+              text: "Løsrive",
               info: callId,
               status: "",
             },
             {
               className: "call-attach",
               icon: "fas fa-sign-in-alt",
-              text: "Respond",
+              text: "Svare",
               info: callId,
               status: "",
             },
             {
               className: "Set-Waypoint",
               icon: "fas fa-map-marker-alt",
-              text: "Set Waypoint",
+              text: "Indstil waypoint",
               info: callId,
               status: "",
             },
             {
               className: "remove-blip",
               icon: "fa-solid fa-circle-minus",
-              text: "Remove Blip",
+              text: "Fjern Blip",
               info: callId,
               status: "",
             },
@@ -4028,28 +4030,28 @@ $(document).ready(() => {
           } else if (sentJob == "doc") {
             applyCustomTheme(customThemes.doc)
           }
-        $(".bolo-nav-item").html("BOLOs");
-        $(".bolos-search-title").html("Bolos");
-        $("#bolos-search-input").attr("placeholder", "Search Bolo...");
-        $(".manage-bolos-title").html("Manage Bolo");
+        $(".bolo-nav-item").html("Efterlysninger");
+        $(".bolos-search-title").html("Efterlysninger");
+        $("#bolos-search-input").attr("placeholder", "Søg efterlysninger...");
+        $(".manage-bolos-title").html("Administre Efterlysninger");
         $(".manage-bolos-editing-title").html(
-          "You are currently creating a new BOLO"
+          "Du er i øjeblikket ved at oprette en ny Efterlysninger"
         );
-        $(".boloplate-title").html("Plate");
-        $(".boloowner-title").html("Owner");
-        $(".boloindividual-title").html("Individual");
-        $("#boloplate").attr("placeholder", "Place plate here...");
+        $(".boloplate-title").html("Nummerplade");
+        $(".boloowner-title").html("Ejer");
+        $(".boloindividual-title").html("Individuel");
+        $("#boloplate").attr("placeholder", "Skriv nummerplade her...");
         $("#bolodetail").attr(
           "placeholder",
-          "Bolo detail goes here..."
+          "Efterlysnings detalier kommer her..."
         );
         $("#boloowner").attr(
           "placeholder",
-          "Place vehicle owner here..."
+          "Placer køretøjets ejer her..."
         );
         $("#boloindividual").attr(
           "placeholder",
-          "Place invidivual here..."
+          "Placer invidivual her..."
         );
         $("#home-warrants-container").fadeIn(0);
         $("#home-reports-container").fadeOut(0);
@@ -4065,10 +4067,10 @@ $(document).ready(() => {
         $(".manage-profile-name-input-1").attr("readonly", true);
         $(".manage-profile-name-input-2").attr("readonly", true);
         $("#reports-officers-involved-tag-title").html(
-          "Officers Involved"
+          "Betjente involveret"
         );
         $("#bolos-officers-involved-tag-title").html(
-          "Officers Involved"
+          "Betjente involveret"
         );
         $(".roster-iframe").attr("src", rosterLink);
         $(".sop-iframe").attr("src", sopLink);
@@ -4700,7 +4702,7 @@ window.addEventListener("message", function (event) {
           {
             className: "incidents-delete",
             icon: "fas fa-times",
-            text: "Delete Incidents",
+            text: "Slet hændelse",
             info: $(this).data("id"),
             status: "",
           },
@@ -4743,7 +4745,7 @@ window.addEventListener("message", function (event) {
       $(".associated-incidents-tags-holder").html("");
 
       $(".manage-incidents-editing-title").html(
-        "You are currently editing incident " + table["id"]
+        "Du er i øjeblikket ved at redigere hændelsen " + table["id"]
       );
       $(".manage-incidents-editing-title").data(
         "id",
@@ -4823,7 +4825,7 @@ window.addEventListener("message", function (event) {
       if (PoliceJobs[playerJob] !== undefined || AmbulanceJobs[playerJob] !== undefined) {
         $(".manage-incidents-title-holder").prepend(
           `
-            <div class="manage-incidents-title">Manage Incident</div>
+            <div class="manage-incidents-title">Administrer hændelse</div>
             <div class="manage-incidents-create"> <span class="fas fa-plus" style="margin-top: 3.5px;"></span></div>
             <div class="manage-incidents-save"><span class="fas fa-save" style="margin-top: 3.5px;"></span></div>
             `
@@ -4833,7 +4835,7 @@ window.addEventListener("message", function (event) {
       } else if (DojJobs[playerJob] !== undefined) {
         $(".manage-incidents-title-holder").prepend(
           `
-            <div class="manage-incidents-title">Manage Incident</div>
+            <div class="manage-incidents-title">Administrer hændelse</div>
             `
         );
         $(".manage-incidents-title").css("width", "95%");
@@ -4945,7 +4947,7 @@ window.addEventListener("message", function (event) {
     } else if (eventData.type == "boloData") {
       let table = eventData.data;
       $(".manage-bolos-editing-title").html(
-        "You are currently editing BOLO " + table["id"]
+        "Du er i øjeblikket ved at redigere efterlysning " + table["id"]
       );
 
       if ($(".badge-logo").attr("src") == "img/ems_badge.webp") {
@@ -5038,7 +5040,7 @@ window.addEventListener("message", function (event) {
         }, 1500);
       }
       $(".manage-bolos-editing-title").html(
-        "You are currently editing BOLO " + id
+        "Du er i øjeblikket ved at redigere efterlysning " + id
       );
       $(".manage-bolos-editing-title").data("id", Number(id));
     } else if (eventData.type == "reportComplete") {
@@ -5057,7 +5059,7 @@ window.addEventListener("message", function (event) {
         }, 1500);
       }
       $(".manage-reports-editing-title").html(
-        "You are currently editing report " + id
+        "Du er i øjeblikket ved at redigere rapporten " + id
       );
       $(".manage-reports-editing-title").data("id", Number(id));
     } else if (eventData.type == "reports") {
@@ -5109,7 +5111,7 @@ window.addEventListener("message", function (event) {
       let table = eventData.data;
 
       $(".manage-reports-editing-title").html(
-        "You are currently editing report " + table["id"]
+        "Du er i øjeblikket ved at redigere rapporten " + table["id"]
       );
 
       $(".manage-reports-editing-title").data("id", Number(table["id"]));
@@ -5211,10 +5213,10 @@ window.addEventListener("message", function (event) {
         stolen = "green-tag";
       }
 
-      $(".vehicle-tags").append(`<div class="vehicle-tag ${impound} impound-tag">Impound</div>`);
-      $(".vehicle-tags").append(`<div class="vehicle-tag ${bolo}">BOLO</div>`);
-      $(".vehicle-tags").append(`<div class="vehicle-tag ${codefive} code5-tag">Code 5</div>`);
-      $(".vehicle-tags").append(`<div class="vehicle-tag ${stolen} stolen-tag">Stolen</div>`);
+      $(".vehicle-tags").append(`<div class="vehicle-tag ${impound} impound-tag">Beslaglagt</div>`);
+      $(".vehicle-tags").append(`<div class="vehicle-tag ${bolo}">Efterlyst</div>`);
+      $(".vehicle-tags").append(`<div class="vehicle-tag ${codefive} code5-tag">Kan være farlig</div>`);
+      $(".vehicle-tags").append(`<div class="vehicle-tag ${stolen} stolen-tag">Stjålet</div>`);
       $(".vehicle-info-imageurl-input").val(table["image"]);
     } else if (eventData.type == "getWeaponData") {
       impoundChanged = false;
@@ -5251,7 +5253,7 @@ window.addEventListener("message", function (event) {
           {
             className: "weapons-delete",
             icon: "fas fa-times",
-            text: "Delete Weapon Info",
+            text: "Slet våbenoplysninger",
             info: $(this).data("id"),
             status: "",
           },
