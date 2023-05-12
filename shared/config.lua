@@ -131,7 +131,6 @@ Config.PenalCodeTitles = {
 }
 
 Config.PenalCode = {
-    Config.PenalCode = {
         [1] = {
             [1] = {title = 'Vold', class = 'Forbrydelser', id = 'P.C. 1001', months = 15, fine = 2500, color = 'orange'},
             [2] = {title = 'Grov vold', class = 'Forbrydelser', id = 'P.C. 1001', months = 25, fine = 2500, color = 'orange'},
@@ -147,8 +146,8 @@ Config.PenalCode = {
             [12] = {title = 'Uagtsomt manddrab', class = 'Forbrydelser', id = 'P.C. 1001', months = 20, fine = 2500, color = 'orange'},
             [13] = {title = 'Butiksrøveri', class = 'Forbrydelser', id = 'P.C. 1001', months = 25, fine = 2500, color = 'orange'},
             [14] = {title = 'Væbnet Butiksrøveri', class = 'Forbrydelser', id = 'P.C. 1001', months = 30, fine = 2500, color = 'orange'},
-            [15] = {title = 'Bankrøveri/Juvelrøveri', class = 'Forbrydelser', id = 'P.C. 1001', months = 30, fine = 2500, color = 'orange'},
-            [16] = {title = 'Væbnet bankrøveri/juveær'vero', class = 'Forbrydelser', id = 'P.C. 1001', months = 40, fine = 2500, color = 'orange'},
+            [15] = {title = 'Bank- og Juvelrøveri', class = 'Forbrydelser', id = 'P.C. 1001', months = 30, fine = 2500, color = 'orange'},
+            [16] = {title = 'Væbnet bank- og juvelrøveri', class = 'Forbrydelser', id = 'P.C. 1001', months = 40, fine = 2500, color = 'orange'},
             [17] = {title = 'Røveri mod National Banken', class = 'Forbrydelser', id = 'P.C. 1001', months = 60, fine = 2500, color = 'orange'},
             [18] = {title = 'Væbnet røveri mod person', class = 'Forbrydelser', id = 'P.C. 1001', months = 15, fine = 2500, color = 'orange'},
             [19] = {title = 'Forsøg på kidnapning', class = 'Forbrydelser', id = 'P.C. 1001', months = 20, fine = 2500, color = 'orange'},

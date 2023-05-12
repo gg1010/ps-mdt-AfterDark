@@ -769,23 +769,23 @@ $(document).ready(() => {
     function () {
       let template = `
       <div style="color: white;">
-          <p><strong>📝 Summary:</strong></p>
-          <p><em>[Insert Report Summary Here]</em></p>
+          <p><strong>📝 Resumé:</strong></p>
+          <p><em>[Indsæt rapportoversigt her]</em></p>
           <p>&nbsp;</p>
-          <p><strong>🧍 Hostage:</strong> [Name Here]</p>
+          <p><strong>🧍 Gidsel:</strong> [Name Here]</p>
           <p>&nbsp;</p>
-          <p><strong>🔪 Weapons/Items Confiscated:</strong></p>
-          <p><em>· [Insert List Here]</em></p>
+          <p><strong>🔪 Våben/genstande konfiskeret:</strong></p>
+          <p><em>· [Indsæt liste her]</em></p>
           <p>&nbsp;</p>
           <p>-----</p>
-          <p><strong style="background-color: var(--color-1);">💸 Fine:</strong></p>
+          <p><strong style="background-color: var(--color-1);">💸 Bøde:</strong></p>
           <p>&nbsp;</p>
-          <p><strong>⌚ Sentence:</strong></p>
+          <p><strong>⌚ Tid i fængsel:</strong></p>
           <p>-----</p>
       </div>
   `;
       $("#manage-incidents-title-input").val(
-        "Name - Charge - " + $(".date").html()
+        "Navn - Dom - " + $(".date").html()
       );
       $(".manage-incidents-reports-content").trumbowyg({
         changeActiveDropdownIcon: true,
@@ -901,7 +901,7 @@ $(document).ready(() => {
       {
         className: "search-vehicle",
         icon: "fas fa-car",
-        text: "Search Vehicle",
+        text: "Søg køretøj",
         info: $(this).data("plate"),
         status: "",
       },
@@ -925,7 +925,7 @@ $(document).ready(() => {
       {
         className: "make-waypoint",
         icon: "fas fa-map-pin",
-        text: "Make Waypoint",
+        text: "Sæt waypoint",
         info: $(this).data("location"),
         status: "",
       },
@@ -961,21 +961,21 @@ $(document).ready(() => {
         {
           className: "remove-image",
           icon: "fas fa-times",
-          text: "Remove Image",
+          text: "Fjern billede",
           info: $(this).attr("src"),
           status: "",
         },
         {
           className: "expand-image",
           icon: "fas fa-expand",
-          text: "Expand Image",
+          text: "Udvid billede",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
         {
           className: "copy-image-link",
           icon: "fa-regular fa-copy",
-          text: "Copy Image Link",
+          text: "Kopier billedlink",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
@@ -1011,7 +1011,7 @@ $(document).ready(() => {
         {
           className: "revoke-licence",
           icon: "fas fa-times",
-          text: "Revoke License",
+          text: "Tilbagekald Licens",
           info: info,
           status: status,
         },
@@ -1021,7 +1021,7 @@ $(document).ready(() => {
         {
           className: "give-licence",
           icon: "fas fa-check",
-          text: "Give License",
+          text: "Giv licens",
           info: info,
           status: status,
         },
@@ -1500,21 +1500,21 @@ $(document).ready(() => {
         {
           className: "remove-image-incident",
           icon: "fas fa-times",
-          text: "Remove Image",
+          text: "Fjern billede",
           info: $(this).attr("src"),
           status: "",
         },
         {
           className: "expand-image",
           icon: "fas fa-expand",
-          text: "Expand Image",
+          text: "Udvid billede",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
         {
           className: "copy-image-link",
           icon: "fa-regular fa-copy",
-          text: "Copy Image Link",
+          text: "Kopier billedlink",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
@@ -1877,21 +1877,21 @@ $(document).ready(() => {
         {
           className: "bolo-remove-image",
           icon: "fas fa-times",
-          text: "Remove Image",
+          text: "Fjern billede",
           info: $(this).attr("src"),
           status: "",
         },
         {
           className: "expand-image",
           icon: "fas fa-expand",
-          text: "Expand Image",
+          text: "Udvid billede",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
         {
           className: "copy-image-link",
           icon: "fa-regular fa-copy",
-          text: "Copy Image Link",
+          text: "Kopier billedlink",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
@@ -2388,21 +2388,21 @@ $(document).ready(() => {
         {
           className: "reports-remove-image",
           icon: "fas fa-times",
-          text: "Remove Image",
+          text: "Fjern billede",
           info: $(this).attr("src"),
           status: "",
         },
         {
           className: "expand-image",
           icon: "fas fa-expand",
-          text: "Expand Image",
+          text: "Udvid billede",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
         {
           className: "copy-image-link",
           icon: "fa-regular fa-copy",
-          text: "Copy Image Link",
+          text: "Kopier billedlink",
           info: $(this).attr("src"),
           status: $(this).css("filter"),
         },
@@ -2436,7 +2436,7 @@ $(document).ready(() => {
         template = `
     <div style="color: white;">
         <p><strong>Submitted to ICU?: [Yes/No]</strong></p>
-        <p><strong>Incident Report:</strong></p>
+        <p><strong>Hændelses rapport:</strong></p>
         <p><em>· [ Brief summary of what happened and who did what while on scene. Note anything that stood out about the scene as well as what was done to treat the patient ]</em></p>
         <p><strong>List of Injuries:</strong></p>
         <p><em>· [ State what injury or injuries occurred ]</em></p>
@@ -3262,7 +3262,7 @@ $(document).ready(() => {
       {
         className: "view-incident2",
         icon: "fas fa-search",
-        text: `View Incident #${$(this).data("id")}`,
+        text: `Se hændelse #${$(this).data("id")}`,
         info: $(this).data("id"),
         status: "",
       },
@@ -3316,7 +3316,7 @@ $(document).ready(() => {
       {
         className: "view-incident",
         icon: "fas fa-search",
-        text: `View Incident #${$(this).data("id")}`,
+        text: `Se hændelse #${$(this).data("id")}`,
         info: $(this).data("id"),
         status: "",
       },
@@ -4060,7 +4060,7 @@ $(document).ready(() => {
         $(".weapons-nav-item").show()
         $(".cams-nav-item").show();
         $(".map-nav-item").show();
-        $(".dispatch-title-ofsomesort").html("Dispatch");
+        $(".dispatch-title-ofsomesort").html("Alarmcentralen");
         $(".dispatch-comms-container").fadeIn(0);
         $(".manage-profile-name-input-1").attr("readonly", true);
         $(".manage-profile-name-input-2").attr("readonly", true);
@@ -4672,7 +4672,7 @@ window.addEventListener("message", function (event) {
           `<div class="incidents-item" data-id="${value.id}">
                     <div class="incidents-top-holder">
                         <div class="incidents-item-title">${value.title}</div>
-                        <div class="incedent-report-name">Incident Report</div>
+                        <div class="incedent-report-name">Hændelses rapport</div>
                     </div>
                     <div class="incidents-bottom-holder">
                         <div class="incedent-report-id">ID: ${value.id}</div>
@@ -5624,7 +5624,7 @@ function searchProfilesResults(result) {
     let licArr = Object.entries(metadata.licences);
 
     if (licArr.length == 0 || licArr.length == undefined) {
-      var licenseTypes = ['business', 'pilot', 'weapon', 'driver'];
+      var licenseTypes = ['Forretning', 'pilot', 'våben', 'kørekort'];
       licArr = Object.entries(licenseTypes.reduce((licenseType, licenseValue) => (licenseType[licenseValue] = false, licenseType), {}));
     }
 
@@ -5663,8 +5663,8 @@ function searchProfilesResults(result) {
                 ${licences}
             </div>
             <div class="profile-criminal-tags">
-                <span class="license-tag ${warrant}">${value.warrant ? "Active" : "No"} Warrant</span>
-                <span class="license-tag ${convictions}">${value.convictions} Convictions </span>
+                <span class="license-tag ${warrant}">${value.warrant ? "Aktiv" : "Ingen"} Efterlysninger</span>
+                <span class="license-tag ${convictions}">${value.convictions} domfældelse </span>
             </div>
         </div>
         <div class="profile-bottom-info">
