@@ -95,24 +95,24 @@ Config.LogPerms = {
 		[4] = true,
 	},
 	['police'] = {
-[10] = true,
+		[10] = true,
 	},
-    ['bcso'] = {
+	['bcso'] = {
 		[4] = true,
 	},
-    ['sast'] = {
+	['sast'] = {
 		[4] = true,
 	},
-    ['sasp'] = {
+	['sasp'] = {
 		[4] = true,
 	},
-    ['sapr'] = {
+	['sapr'] = {
 		[4] = true,
 	},
-    ['doc'] = {
+	['doc'] = {
 		[4] = true,
 	},
-    ['lssd'] = {
+	['lssd'] = {
 		[4] = true,
 	},
 }
