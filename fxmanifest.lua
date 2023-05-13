@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Flawws, Flakey, Idris and the Project Sloth team'
-description 'EchoRP MDT Rewrite for QBCore'
+description 'Gustav har lavet den til dansk fordi han er bedre'
 version '2.4.9'
 
 lua54 'yes'
