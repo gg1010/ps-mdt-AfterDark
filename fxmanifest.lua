@@ -2,7 +2,7 @@ fx_version 'cerulean'
 game 'gta5'
 
 author 'Flawws, Flakey, Idris and the Project Sloth team'
-description '123112312312323'
+description 'gg1010 made this to danish!!'
 version '2.4.9'
 
 lua54 'yes'
