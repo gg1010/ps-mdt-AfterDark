@@ -95,7 +95,7 @@ Config.LogPerms = {
 		[4] = true,
 	},
 	['police'] = {
-		[4] = true,
+[10] = true,
 	},
     ['bcso'] = {
 		[4] = true,
