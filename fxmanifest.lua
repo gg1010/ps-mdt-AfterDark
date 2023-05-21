@@ -5,6 +5,8 @@ author 'Flawws, Flakey, Idris and the Project Sloth team'
 description 'gg1010 made this to danish!!'
 version '2.4.9'
 
+this_is_a_map 'yes'
+
 lua54 'yes'
 
 shared_script 'shared/config.lua'
