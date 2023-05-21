@@ -265,7 +265,7 @@ Config.PenalCode = {
         [52] = {title = 'Brugstyveri', class = 'Forbrydelse', id = 'P.C. 2001', months = 15, fine = 10000, color = 'orange'},
         [53] = {title = 'Køretøj i uforsvarlig tilstand', class = 'Forbrydelse', id = 'P.C. 2001', months = 0, fine = 7000, color = 'orange'},
         [54] = {title = 'Kørsel i frakendelsesperioden', class = 'Forbrydelse', id = 'P.C. 2001', months = 0, fine = 5000, color = 'orange'},
-    }
+    },
     [7] = {
         [1] = {title = 'Jagt I ulovlig områder', class = 'Overtrædelse', id = 'P.C. 10001', months = 0, fine = 1100, color = 'green'},
         [2] = {title = 'Jagt uden license', class = 'Overtrædelse', id = 'P.C. 10002', months = 0, fine = 1150, color = 'green'},
