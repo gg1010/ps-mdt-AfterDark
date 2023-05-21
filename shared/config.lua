@@ -16,7 +16,7 @@ Config.ClockinWebhook = 'https://discord.com/api/webhooks/1106557228686782547/Bs
 
 -- If set to true = Fine gets automatically removed from bank automatically charging the player.
 -- If set to false = The fine gets sent as an Invoice to their phone and it us to the player to pay for it, can remain unpaid and ignored.
-Config.BillVariation = true
+Config.BillVariation = false
 
 -- Set up your inventory to automatically retrieve images when a weapon is registered at a weapon shop or self-registered.
 -- If you're utilizing lj-inventory's latest version from GitHub, no further modifications are necessary. 
