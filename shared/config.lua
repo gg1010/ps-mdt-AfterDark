@@ -116,6 +116,86 @@ Config.LogPerms = {
 		[4] = true,
 	},
 }
+Config.RemoveIncidentPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[4] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
+		[4] = true,
+	},
+}
+
+Config.RemoveReportPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[4] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
+		[4] = true,
+	},
+}
+
+Config.RemoveWeaponsPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[4] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
+		[4] = true,
+	},
+}
 
 Config.PenalCodeTitles = {
     [1] = 'Voldelige forbrydelser',
