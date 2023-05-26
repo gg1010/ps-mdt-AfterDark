@@ -776,6 +776,8 @@ $(document).ready(() => {
           <p>&nbsp;</p>
           <p><strong>🧍 Gidsel:</strong> [Navn Her]</p>
           <p>&nbsp;</p>
+          <p><strong>🗄️ Bevis Rum:</strong> Rum nr. # | Skuffe nr. #</p>
+          <p>&nbsp;</p>
           <p><strong>🔪 Våben/genstande konfiskeret:</strong></p>
           <p><em>· [Indsæt liste her]</em></p>
           <p>&nbsp;</p>
@@ -5779,7 +5781,7 @@ center: [0, -1024],
 maxBoundsViscosity: 1.0
 });
 
-var customImageUrl = 'https://i1.lensdump.com/i/gj7atT.png';
+var customImageUrl = 'https://i.imgur.com/EdOZjzF.jpg';
 
 var sw = map.unproject([0, 1024], 3 - 1);
 var ne = map.unproject([1024, 0], 3 - 1);

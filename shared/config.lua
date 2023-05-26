@@ -16,7 +16,7 @@ Config.ClockinWebhook = 'https://discord.com/api/webhooks/1106557228686782547/Bs
 
 -- If set to true = Fine gets automatically removed from bank automatically charging the player.
 -- If set to false = The fine gets sent as an Invoice to their phone and it us to the player to pay for it, can remain unpaid and ignored.
-Config.BillVariation = true
+Config.BillVariation = false
 
 -- Set up your inventory to automatically retrieve images when a weapon is registered at a weapon shop or self-registered.
 -- If you're utilizing lj-inventory's latest version from GitHub, no further modifications are necessary. 
@@ -41,7 +41,7 @@ Config.sopLink = {
 
 -- Google Docs Link
 Config.RosterLink = {
-    ['police'] = 'https://docs.google.com/spreadsheets/d/1VYLsPTCnLMOnkQwttOwldY5WxJM78s9BCgDnXYNB6e0/edit#gid=1406396456',
+    ['police'] = 'https://docs.google.com/spreadsheets/d/1CvX9mjDmo517mlf4CZUeYDn9aaInvlCKUCaO2LtVRKA/edit#gid=560765526',
     ['ambulance'] = '',
     ['bcso'] = '',
     ['doj'] = '',
@@ -86,7 +86,7 @@ Config.ImpoundLocations = {
 
 Config.UseWolfknightRadar = true
 Config.WolfknightNotifyTime = 5000 -- How long the notification displays for in milliseconds (30000 = 30 seconds)
-
+Config.PlateScanForDriversLicense = true -- If true, plate scanner will check if the owner of the scanned vehicle has a drivers license
 -- IMPORTANT: To avoid making excessive database queries, modify this config to true 'CONFIG.use_sonorancad = true' setting in the configuration file located at 'wk_wars2x/config.lua'. 
 -- Enabling this setting will limit plate checks to only those vehicles that have been used by a player.
 
@@ -113,6 +113,96 @@ Config.LogPerms = {
 		[4] = true,
 	},
 	['lssd'] = {
+		[4] = true,
+	},
+}
+Config.RemoveIncidentPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[0] = true,
+		[1] = true,
+		[2] = true,
+		[3] = true,
+		[4] = true,
+		[5] = true,
+		[6] = true,
+		[7] = true,
+		[8] = true,
+		[9] = true,
+		[10] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
+		[4] = true,
+	},
+}
+
+Config.RemoveReportPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[10] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
+		[4] = true,
+	},
+}
+
+Config.RemoveWeaponsPerms = {
+	['ambulance'] = {
+		[4] = true,
+	},
+	['police'] = {
+		[10] = true,
+	},
+    ['bcso'] = {
+		[4] = true,
+	},
+    ['sast'] = {
+		[4] = true,
+	},
+    ['sasp'] = {
+		[4] = true,
+	},
+    ['sapr'] = {
+		[4] = true,
+	},
+    ['doc'] = {
+		[4] = true,
+	},
+    ['lssd'] = {
 		[4] = true,
 	},
 }
@@ -265,7 +355,7 @@ Config.PenalCode = {
         [52] = {title = 'Brugstyveri', class = 'Forbrydelse', id = 'P.C. 2001', months = 15, fine = 10000, color = 'orange'},
         [53] = {title = 'Køretøj i uforsvarlig tilstand', class = 'Forbrydelse', id = 'P.C. 2001', months = 0, fine = 7000, color = 'orange'},
         [54] = {title = 'Kørsel i frakendelsesperioden', class = 'Forbrydelse', id = 'P.C. 2001', months = 0, fine = 5000, color = 'orange'},
-    }
+    },
     [7] = {
         [1] = {title = 'Jagt I ulovlig områder', class = 'Overtrædelse', id = 'P.C. 10001', months = 0, fine = 1100, color = 'green'},
         [2] = {title = 'Jagt uden license', class = 'Overtrædelse', id = 'P.C. 10002', months = 0, fine = 1150, color = 'green'},
