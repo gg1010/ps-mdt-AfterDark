@@ -776,7 +776,7 @@ $(document).ready(() => {
           <p>&nbsp;</p>
           <p><strong>🧍 Gidsel:</strong> [Navn Her]</p>
           <p>&nbsp;</p>
-          <p><strong>🗄️ Evidence Location:</strong> Stash # | Drawer #</p>
+          <p><strong>🗄️ Bevis Rum:</strong> Rum nr. # | Skuffe nr. #</p>
           <p>&nbsp;</p>
           <p><strong>🔪 Våben/genstande konfiskeret:</strong></p>
           <p><em>· [Indsæt liste her]</em></p>
