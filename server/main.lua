@@ -55,10 +55,8 @@ if Config.UseWolfknightRadar == true then
 			TriggerClientEvent('QBCore:Notify', src, 'EFTERLYST - HÆNDELSESID: '..incidentId..' | Ejer: '..owner..' | Nummerplade: '..plate, 'error', Config.WolfknightNotifyTime)
 		end
 
-		if Config.PlateScanForDriversLicense then
-			if driversLicense == false and vehicleOwner then
-				TriggerClientEvent('QBCore:Notify', src, 'NO DRIVERS LICENCE | Registered Owner: '..vehicleOwner..' | Plate: '..plate, 'error', Config.WolfknightNotifyTime)
-			end
+			if Config.PlateScanForDriversLicense and driversLicense == false and vehicleOwner then
+			TriggerClientEvent('QBCore:Notify', src, 'NO DRIVERS LICENCE | Registered Owner: '..vehicleOwner..' | Plate: '..plate, 'error', Config.WolfknightNotifyTime)
 		end
 
 
