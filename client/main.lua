@@ -258,6 +258,7 @@ RegisterNetEvent('mdt:client:open', function(bulletin, activeUnits, calls, cid)
     elseif currentStreetName ~= nil and currentStreetName ~= "" then playerStreetsLocation = currentStreetName .. ", " .. area
     else playerStreetsLocation = area end
 
+    
     -- local grade = PlayerData.job.grade.name
 
     SendNUIMessage({ type = "data", activeUnits = activeUnits, citizenid = cid, ondutyonly = Config.OnlyShowOnDuty, name = "Velkommen, " ..PlayerData.job.grade.name..' '..PlayerData.charinfo.lastname:sub(1,1):upper()..PlayerData.charinfo.lastname:sub(2), location = playerStreetsLocation, fullname = PlayerData.charinfo.firstname..' '..PlayerData.charinfo.lastname, bulletin = bulletin })
