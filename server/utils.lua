@@ -2,7 +2,7 @@ local QBCore = exports['qb-core']:GetCoreObject()
 
 function GetPlayerData(source)
 	local Player = QBCore.Functions.GetPlayer(source)
-	if Player == nil then print("\27[31mFølgende fejl opstod, fordi en spiller forlod serveren, mens han deltog\27[0m") end
+	if Player == nil then print("\27[31mThe following error happened because a Player left the server while joining\27[0m") end
 	return Player.PlayerData
 end
 

@@ -3,7 +3,7 @@ game 'gta5'
 
 author 'Flawws, Flakey, Idris and the Project Sloth team'
 description 'gg1010 made this to danish!!'
-version '2.4.9'
+version '2.5.0'
 
 lua54 'yes'
 
