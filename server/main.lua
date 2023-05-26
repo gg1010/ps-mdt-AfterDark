@@ -132,10 +132,10 @@ RegisterNetEvent("ps-mdt:server:ToggleDuty", function()
     local src = source
     local player = QBCore.Functions.GetPlayer(src)
     if not player.PlayerData.job.onduty then
-	--// Remove from MDT
-	if GetActiveData(player.PlayerData.citizenid) then
-		activeUnits[player.PlayerData.citizenid] = nil
-	end
+		--// Remove from MDT
+		if GetActiveData(player.PlayerData.citizenid) then
+			activeUnits[player.PlayerData.citizenid] = nil
+		end
     end
 end)
 
